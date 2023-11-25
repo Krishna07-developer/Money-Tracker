@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
     margin-top: 50px;
     padding: 12px;
@@ -83,4 +83,15 @@
     text-decoration: none;
     color: black;
 
+}
+
+/* Total income and expenses */
+
+.totalmoneytrack{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.totalmoneytrack p{
+    font-size: large;
 }

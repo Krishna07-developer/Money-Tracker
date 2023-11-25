@@ -24,7 +24,15 @@ mongoose.connect(process.env.CONNECT_SERVER).then(()=>{
 
 app.get("/" , async(req,res)=>{
     const datatransaction = await Transaction.find()
-    res.render('index' , {datatransaction})
+
+    const income = datatransaction.reduce((total , transaction)=>{
+        return transaction.type === 'Income' ? total + transaction.amount : total;
+    },0)
+
+    const Expense = datatransaction.reduce((total , transaction)=>{
+        return transaction.type === 'Expense' ? total + transaction.amount : total;
+    },0)
+    res.render('index' , {datatransaction , income , Expense})
 })
 
 
