@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money-Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="indexContainer">
+        <h1>Money Tracker</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% datatransaction.forEach(element => { %>
+                    <tr>
+                        <td><%= element.description %></td>
+                        <td><%= element.amount %></td>
+                        <td><%= element.type %></td>
+                        <td style="display: flex;flex-wrap: nowrap;"><a style="white-space: nowrap;" href="/edit/<%= element._id %>">Edit 🖊️</a>/ <a style="white-space: nowrap;" href="/delete/<%= element._id %>">Delete 🗑️</a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/new">Add New Transaction</a>
+    </section>
+</body>
+</html>

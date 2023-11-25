@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="newContainer">
+        <h1>Add Transaction</h1>
+        <form action="/new" method="POST">
+            <label for="desc">Description</label>
+            <input type="text" name="description" id="description" placeholder="Description...">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount" placeholder="Amount...">
+            <label for="type">Type</label>
+            <select name="type" id="type">
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+            <button type="submit" style="background-color: rgb(54, 237, 234);">Add Transaction</button>
+        </form>
+        <button><a href="/">Back to home</a></button>
+    </section>
+</body>
+</html>
