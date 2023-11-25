@@ -9,11 +9,11 @@
 <body>
     <section class="newContainer">
         <h1>Add Transaction</h1>
-        <form action="/new" method="POST">
+        <form action="/new" method="POST" autocomplete="off">
             <label for="desc">Description</label>
-            <input type="text" name="description" id="description" placeholder="Description...">
+            <input type="text" name="description" id="description" placeholder="Description..." required>
             <label for="amount">Amount</label>
-            <input type="number" name="amount" id="amount" placeholder="Amount...">
+            <input type="number" name="amount" id="amount" placeholder="Amount..." required>
             <label for="type">Type</label>
             <select name="type" id="type">
                 <option value="Income">Income</option>
@@ -21,6 +21,7 @@
             </select>
             <button type="submit" style="background-color: rgb(54, 237, 234);">Add Transaction</button>
         </form>
+        
         <button><a href="/">Back to home</a></button>
     </section>
 </body>

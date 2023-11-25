@@ -41,6 +41,7 @@ app.get("/new" , (req,res)=>{
     res.render("new")
 })
 app.post("/new" , async(req,res)=>{
+   try {
     const createdData = await new Transaction({
         description : req.body.description,
         amount : req.body.amount,
@@ -50,6 +51,9 @@ app.post("/new" , async(req,res)=>{
     await createdData.save().then(()=>{
         res.redirect("/")
     })
+   } catch (error) {
+        res.render("error" , {error})
+   }
 
 
 })
