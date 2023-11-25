@@ -16,10 +16,12 @@
     margin: auto;
     margin-top: 50px;
     padding: 12px;
+    font-size: 20px;
 }
 .indexContainer h1 , .newContainer h1{
     font-size: 50px;
     margin-bottom: 20px;
+    text-shadow: 0 2px 2px rgb(0, 90, 128);
 }
 .indexContainer table{
     width: 100%;
