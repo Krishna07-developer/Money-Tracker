@@ -49,7 +49,7 @@
     <section class="newContainer">
         <h1>Update Transaction</h1>
         <form action="/edit/<%= editone._id %>" method="POST">
-            <label for="desc">Description</label>
+            <label for="description">Description</label>
             <input type="text" name="description" id="description" value="<%= editone.description %>">
             <label for="amount">Amount</label>
             <input type="number" name="amount" id="amount" value="<%= editone.amount %>">
@@ -58,7 +58,7 @@
                 <option value="Income" <%= editone.type === "Income" ? "selected" : ''  %>>Income</option>
                 <option value="Expense" <%= editone.type === "Expense" ? 'selected' : '' %>>Expense</option>
             </select>
-            <button type="submit" style="background-color: rgb(54, 237, 234);white-space: nowrap;">Update Transaction</button>
+            <button type="submit" style="background-color: rgb(54, 237, 234);white-space: nowrap;cursor: pointer;">Update Transaction</button>
         </form>
         <button><a href="/">Back to Overview</a></button>
     </section>
